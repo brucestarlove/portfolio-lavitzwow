@@ -28,7 +28,7 @@ Your project is already configured for Netlify deployment with:
 3. **Configure Build Settings**
    - **Build command**: `npm run build`
    - **Publish directory**: `dist`
-   - **Node version**: `18` (or latest LTS)
+   - **Node version**: `20` (or latest LTS)
 
 4. **Deploy**
    - Click "Deploy site"
@@ -130,6 +130,26 @@ To verify your custom subdomain is working:
 - Check build logs in Netlify dashboard
 - Ensure all dependencies are in `package.json`
 - Verify Node.js version compatibility
+
+### Node.js Version Issues
+If Netlify is using an old Node.js version (like v10.16.2):
+
+1. **Clear Build Cache**
+   - Go to Site settings → Build & deploy → Clear cache
+   - Redeploy your site
+
+2. **Verify Configuration Files**
+   - Ensure `netlify.toml` is in the root directory
+   - Check that `.nvmrc` file exists with Node.js version
+   - Verify `package.json` has engines field
+
+3. **Manual Node.js Version Setting**
+   - In Netlify dashboard → Site settings → Build & deploy
+   - Set "Node.js version" to 20.x manually
+
+4. **Force Redeploy**
+   - Trigger a new deployment from Git
+   - Or use "Trigger deploy" in Netlify dashboard
 
 ### DNS Issues
 - Use [whatsmydns.net](https://whatsmydns.net) to check propagation
