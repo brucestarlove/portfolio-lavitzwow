@@ -1,0 +1,13 @@
+{
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/prebis",
+      "destination": "/prebis.html"
+    },
+    {
+      "source": "/bis", 
+      "destination": "/bis.html"
+    }
+  ]
+}
