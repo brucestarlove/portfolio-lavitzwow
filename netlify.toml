@@ -1,0 +1,22 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/prebis"
+  to = "/prebis.html"
+  status = 200
+
+[[redirects]]
+  from = "/bis"
+  to = "/bis.html"
+  status = 200
+
+# Handle 404s
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404

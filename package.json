@@ -4,9 +4,10 @@
   "description": "Lavitzio site",
   "main": "gulpfile.js",
   "scripts": {
-    "build": "gulp build",
+    "build": "gulp build && cp -r assets dist/ && cp -r css dist/ && cp -r js dist/ && cp *.html dist/",
     "dev": "gulp watch",
-    "vercel-build": "gulp build && cp -r assets dist/ && cp -r css dist/ && cp -r js dist/ && cp *.html dist/"
+    "vercel-build": "gulp build && cp -r assets dist/ && cp -r css dist/ && cp -r js dist/ && cp *.html dist/",
+    "netlify-build": "gulp build && cp -r assets dist/ && cp -r css dist/ && cp -r js dist/ && cp *.html dist/"
   },
   "dependencies": {
     "bootstrap": "^4.3.1"
