@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../js/main.js"],
+  "sourcesContent": ["/* Set Behavior Logo */\nvar setBehaviorLogo = function() {\n  logo = document.getElementById('logo');\n  var y = window.scrollY;\n  // console.log(y);\n  if (y >= 50) {\n    logo.classList.add('sticky');\n  } else {\n    logo.classList.remove('sticky');\n  }\n};\n\n/* On Load */\n(function() {\n  $(function () {\n    $('[data-toggle=\"tooltip\"]').tooltip()\n  })\n  // window.addEventListener('scroll', setBehaviorLogo);\n})();\n"],
+  "mappings": "OAaC,UAAW,CACV,EAAE,UAAY,CACZ,EAAE,yBAAyB,EAAE,QAAQ,CACvC,CAAC,CAEH,GAAG",
+  "names": []
+}
